@@ -17,6 +17,54 @@
     }
 
 
-    #app-navbar {
-        margin-bottom: 0px;
+#app-navbar {
+    margin-bottom: 0px;
+}
+
+
+.copyright {
+    text-align: center;
+    margin: 30px;
+}
+
+#about-section {
+    padding: 100px;
+}
+
+    #about-section span {
+        text-align: center;
+        font-size: 55px;
     }
+
+.left-icon {
+   margin-right: 20px;
+}
+
+#schedule-section h2 {
+    text-align: center;
+}
+
+#schedule-section{
+    padding: 100px;
+}
+
+#last-event-section {
+    padding: 100px;
+}
+
+#last-event-section img{
+    max-width: 50%;
+    margin-left: 25%;
+}
+
+#contact-section {
+    padding: 130px;
+}
+
+#contact-section h5{
+    margin-bottom: 50px;
+}
+
+#form-fields{
+    padding-bottom: 50px;
+}

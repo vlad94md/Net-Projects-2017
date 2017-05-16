@@ -20,16 +20,13 @@
         <div class="collapse navbar-collapse" id="navigation-example-2">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="#" class="btn btn-simple">Components</a>
-                </li>
-                <li>
-                    <a href="#" class="btn btn-simple">Tutorial</a>
-                </li>
-                <li>
-                    <a href="#" target="_blank" class="btn btn-simple"><i class="fa fa-twitter"></i></a>
+                    <a href="#" target="_blank" class="btn btn-simple"><i class="fa fa-vk"></i></a>
                 </li>
                 <li>
                     <a href="#" target="_blank" class="btn btn-simple"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" class="btn btn-simple"><i class="fa fa-instagram"></i></a>
                 </li>
             </ul>
         </div><!-- /.navbar-collapse -->
@@ -38,10 +35,10 @@
 
 
 @*<div class="alert alert-danger landing-alert">
-    <div class="container text-center">
-        <h5>Get a 10% discount on selected products until the 5th of November!</h5>
-    </div>
-</div>*@
+        <div class="container text-center">
+            <h5>Get a 10% discount on selected products until the 5th of November!</h5>
+        </div>
+    </div>*@
 
 <div class="wrapper">
     <div class="landing-header" style="background-image: url('/images/movie.jpg');">
@@ -50,83 +47,132 @@
                 <h1 class="title-uppercase">Enjoy Movies</h1>
                 <h4>Always watch movies in an awesome place.</h4>
                 <br />
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn"><i class="fa fa-play"></i>Watch video</a>
-                <a class="btn">Download</a>
             </div>
         </div>
     </div>
     <div class="main">
-        <div class="section text-center landing-section">
+        <div id="about-section" class="section text-center landing-section">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h2>Let's talk product</h2>
-                        <h5>This is the paragraph where you can write more details about your product. Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious, otherwise he wouldn't scroll to get here. Add a button if you want the user to see more.</h5>
+                        <h2>What is a movie marathon?</h2>
+                        <span>
+                            <i class="fa fa-play left-icon"></i>
+                            <i class="fa fa-film right-icon"></i>
+                        </span>
+                        <h5>This event last a whole night. It starts from late evening and ends early morning. Often it includes three or even four movies. Movies are picked by a well chosen topic. We have a warm atmopshre, very comfortable chairs and coockies with tea.</h5>
                         <br />
-                        <a href="#" class="btn btn-danger btn-fill">See Details</a>
+                        <a href="#" class="btn btn-danger btn-fill">I want it!</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="section section-light-brown landing-section">
+        <div id="schedule-section" class="section section-light-brown landing-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 column">
-                        <h4>First Attribute</h4>
-                        <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
-                        <a class="btn btn-danger btn-simple" href="#">See more <i class="fa fa-chevron-right"></i></a>
+                    <h2>Our chedule for tonight:</h2>
+                    <br />
+                    <div class="col-md-6 column col-md-offset-3">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Movie Name</th>
+                                    <th>Start Time</th>
+                                    <th>End Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>The Mask</td>
+                                    <td>20:00</td>
+                                    <td>21:45</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Titanic</td>
+                                    <td>22:00</td>
+                                    <td>23:50</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Monkey Planet</td>
+                                    <td>12:30</td>
+                                    <td>01:50</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>God Father</td>
+                                    <td>02:30</td>
+                                    <td>04:00</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="col-md-4 column">
-                        <h4>Second Attribute</h4>
-                        <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
-                        <a class="btn btn-danger btn-simple" href="#">See more <i class="fa fa-chevron-right"></i></a>
-                    </div>
-                    <div class="col-md-4 column">
-                        <h4>Third Attribute</h4>
-                        <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
-                        <a class="btn btn-danger btn-simple" href="#">See more <i class="fa fa-chevron-right"></i></a>
-                    </div>
+
                 </div>
             </div>
         </div>
 
-        <div class="section section-dark text-center landing-section">
-            <div class="container">
-                <h2>Let's talk about us</h2>
-                <div class="col-md-4">
-                    <div class="team-player">
-                        <img src="~/lib/papper-kit/assets/paper_img/chet_faker_2.jpg" alt="Thumbnail Image" class="img-circle img-responsive">
-                        <h5>Chet Faker <br /><small class="text-muted">Music</small></h5>
-                        <p>You can write here details about one of your team members. You can give more details about what they do. Feel free to add some <a href="#">links</a> for people to be able to follow them outside the site.</p>
+        <div id="last-event-section" class="section section-dark text-center landing-section">
+            <div class="row">
+                <h2>Last time was fun! Check it out!</h2>
+                <div class="col-md-12">
+                    <div id="carousel">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <div class="carousel slide" data-ride="carousel">
+
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="2" class="active"></li>
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <div class="item">
+                                        <img src="http://lorempixel.com/600/600/" alt="Awesome Image">
+                                    </div>
+                                    <div class="item">
+                                        <img src="http://lorempixel.com/600/600/" alt="Awesome Image">
+                                    </div>
+                                    <div class="item active">
+                                        <img src="http://lorempixel.com/600/600/" alt="Awesome Image">
+                                    </div>
+                                </div>
+
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                    <span class="fa fa-angle-left"></span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                    <span class="fa fa-angle-right"></span>
+                                </a>
+                            </div>
+                        </div> <!-- end carousel -->
+
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="team-player">
-                        <img src="~/lib/papper-kit/assets/paper_img/flume.jpg" alt="Thumbnail Image" class="img-circle img-responsive">
-                        <h5>Flume <br /><small class="text-muted">Production</small></h5>
-                        <p>You can write here details about one of your team members. You can give more details about what they do. Feel free to add some <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="team-player">
-                        <img src="~/lib/papper-kit/assets/paper_img/banks.jpg" alt="Thumbnail Image" class="img-circle img-circle img-responsive">
-                        <h5>Banks <br /><small class="text-muted">Music</small></h5>
-                        <p>You can write here details about one of your team members. You can give more details about what they do. Feel free to add some <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                    </div>
+                    @*<img src="http://lorempixel.com/600/600/" alt="Thumbnail Image" class="img-thumbnail img-responsive">
+                    <img src="http://lorempixel.com/400/300/" alt="Thumbnail Image" class="img-thumbnail img-responsive">
+                    <img src="http://lorempixel.com/400/300/" alt="Thumbnail Image" class="img-thumbnail img-responsive">*@
                 </div>
             </div>
         </div>
 
-        <div class="section landing-section">
+        <div id="contact-section" class="section landing-section">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h2 class="text-center">Keep in touch?</h2>
+                        <h2 class="text-center">Get your ticket online!</h2>
+                        <h5 class="text-center">You will have your ticket sent to email you mentioned in form below.</h5>
+                        <br/>
                         <form class="contact-form">
-                            <div class="row">
+                            <div id="form-fields" class="row">
                                 <div class="col-md-6">
-                                    <label>Name</label>
+                                    <label>Fullname</label>
                                     <input class="form-control" placeholder="Name">
                                 </div>
                                 <div class="col-md-6">
@@ -134,11 +180,9 @@
                                     <input class="form-control" placeholder="Email">
                                 </div>
                             </div>
-                            <label>Message</label>
-                            <textarea class="form-control" rows="4" placeholder="Tell us your thoughts and feelings..."></textarea>
                             <div class="row">
                                 <div class="col-md-4 col-md-offset-4">
-                                    <button class="btn btn-danger btn-block btn-lg btn-fill">Send Message</button>
+                                    <button class="btn btn-danger btn-block btn-lg btn-fill">Get a ticket</button>
                                 </div>
                             </div>
                         </form>
@@ -151,28 +195,8 @@
 
 <footer class="footer-demo section-dark">
     <div class="container">
-        <nav class="pull-left">
-            <ul>
-
-                <li>
-                    <a href="http://www.creative-tim.com">
-                        Creative Tim
-                    </a>
-                </li>
-                <li>
-                    <a href="http://blog.creative-tim.com">
-                        Blog
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.creative-tim.com/product/rubik">
-                        Licenses
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <div class="copyright pull-right">
-            &copy; 2015, made with <i class="fa fa-heart heart"></i> by Creative Tim
+        <div class="copyright">
+            2017 &copy;  made to <i class="fa fa-play"></i> movies.
         </div>
     </div>
 </footer>
