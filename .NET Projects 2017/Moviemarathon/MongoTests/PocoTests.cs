@@ -25,6 +25,9 @@ namespace MongoTests
                 Age = 23
             };
 
+            document.Addreses.Add("Fake street 34");
+            document.Contact.Email = "test@mail.com";
+
             Console.WriteLine(document.ToJson());
         }
 
@@ -34,6 +37,13 @@ namespace MongoTests
             public int Age { get; set; }
 
             public List<string> Addreses  = new List<string>();
+            public Contact Contact  = new Contact();
+        }
+
+        public class Contact
+        {
+            public string Email { get; set; }
+            public string Phone { get; set; }
         }
     }
 }

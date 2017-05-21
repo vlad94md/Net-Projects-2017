@@ -10,7 +10,7 @@ namespace ConsoleApp1
     {
         public static void Main(string[] args)
         {
-            var client = new MongoClient("mongodb://localhost");
+            var client = new MongoClient("mongodb://localhost/?journal=true");
             var database = client.GetDatabase("MovieMarathon");
             var info = database.GetCollection<Ticket>("Tickets");
             
