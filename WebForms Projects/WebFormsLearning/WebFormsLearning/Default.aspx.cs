@@ -13,5 +13,10 @@ namespace WebFormsLearning
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            ResultText.Text = NameTextBox.Text;
+        }
     }
 }
