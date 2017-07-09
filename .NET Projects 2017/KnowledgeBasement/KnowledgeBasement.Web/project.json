@@ -21,9 +21,9 @@
     "Microsoft.Extensions.Logging.Debug": "1.0.0",
     "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
     "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
+    "PetaPoco.NetCore": "1.0.1",
     "KnowledgeBasement.Persistence": "1.0.0-*",
-    "KnowledgeBasement.Services": "1.0.0-*"
-  },
+    "KnowledgeBasement.Services": "1.0.0-*"  },
 
   "tools": {
     "BundlerMinifier.Core": "2.0.238",
