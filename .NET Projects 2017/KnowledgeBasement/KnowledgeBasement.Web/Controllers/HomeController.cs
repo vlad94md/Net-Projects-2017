@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using PetaPoco.NetCore;
 using System.Linq;
 using KnowledgeBasement.Persistence;
+using KnowledgeBasement.Persistence.Context;
 using KnowledgeBasement.Persistence.Entities;
 using Microsoft.Extensions.Configuration;
 
@@ -17,24 +18,27 @@ namespace KnowledgeBasement.Web.Controllers
 
         public IActionResult About()
         {
-            
-            //var db = DatabaseContext.GetDatabase("Server=tcp:vguleaevdatabase.database.windows.net,1433;Initial Catalog=knowledgebasementdb;Persist Security Info=False;User ID=vguleaev;Password=Databasepass1!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
-            var db = DatabaseContext.GetDatabase("Server=(localdb)\\MSSQLLocalDB;Database=knowledgebasementdb;Trusted_Connection=True;MultipleActiveResultSets=true");
-
-            var newUser = new AppUser()
+            using (var db = new UnitOfWork("Server=(localdb)\\MSSQLLocalDB;Database=knowledgebasementdb;Trusted_Connection=True;MultipleActiveResultSets=true"))
             {
-                FirstName = "Vlad",
-                Id = Guid.NewGuid(),
-                LastName = "Guleaev",
-                Password = "12345",
-                Username = "vguleaev"
-            };
 
-            db.Insert("Users", "Id", false, newUser);
+                var newUser = new AppUser()
+                {
+                    FirstName = "Vlad",
+                    Id = Guid.NewGuid(),
+                    LastName = "Guleaev",
+                    Password = "12345",
+                    Username = "vguleaev"
+                };
 
-            var users = db.Query<AppUser>(Sql.Builder.Append("select * from Users")).ToList();
+                db.Users.Insert(newUser);
 
-            ViewData["Message"] = "Your application description page." + users[0].FirstName;
+                var users = db.Users.GetAll();
+
+                ViewData["Message"] = "Your application description page." + users[0].FirstName;
+            }
+            //var db = DatabaseContext.GetDatabase("Server=tcp:vguleaevdatabase.database.windows.net,1433;Initial Catalog=knowledgebasementdb;Persist Security Info=False;User ID=vguleaev;Password=Databasepass1!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            //var db = DatabaseContext.GetDatabase("Server=(localdb)\\MSSQLLocalDB;Database=knowledgebasementdb;Trusted_Connection=True;MultipleActiveResultSets=true");
+
 
             return View();
         }
