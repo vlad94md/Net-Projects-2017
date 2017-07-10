@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using KnowledgeBasement.Persistence.Entities;
 using KnowledgeBasement.Persistence.Repositories;
 using PetaPoco.NetCore;
 
@@ -14,15 +11,19 @@ namespace KnowledgeBasement.Persistence.Context
         {
             _database = DatabaseContext.GetDatabase(connectionString);
         }
-
         private UserRepository _users;
+        private ProjectRepository _projects;
+        private ArticleRepository _articles;
+        private FolderRepository _folders;
+        private IconRepository _icons;
+        private CategoryRepository _categories;
 
         public UserRepository Users => _users ?? new UserRepository(_database, "Users");
-        //public List<Project> Projects => _database.Query<Project>(Sql.Builder.Append("select * from Projects")).ToList();
-        //public List<Article> Articles => _database.Query<Article>(Sql.Builder.Append("select * from Articles")).ToList();
-        //public List<Folder> Folders => _database.Query<Folder>(Sql.Builder.Append("select * from Folders")).ToList();
-        //public List<Icon> Icons => _database.Query<Icon>(Sql.Builder.Append("select * from Projects")).ToList();
-        //public List<Category> Categories => _database.Query<Category>(Sql.Builder.Append("select * from Categories")).ToList();
+        public ProjectRepository Projects => _projects ?? new ProjectRepository(_database, "Projects");
+        public ArticleRepository Articles => _articles ?? new ArticleRepository(_database, "Articles");
+        public FolderRepository Folders => _folders ?? new FolderRepository(_database, "Folders");
+        public IconRepository Icons => _icons ?? new IconRepository(_database, "Icons");
+        public CategoryRepository Categories => _categories ?? new CategoryRepository(_database, "Categories");
 
         public void Dispose()
         {

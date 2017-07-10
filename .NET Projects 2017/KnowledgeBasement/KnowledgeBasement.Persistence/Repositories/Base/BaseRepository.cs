@@ -42,5 +42,10 @@ namespace KnowledgeBasement.Persistence.Repositories.Base
         {
             return _database.SingleOrDefault<T>(id);
         }
+
+        public T InsertWithIncrement(T entity)
+        {
+            return (T)_database.Insert(tableName, "Id", true, entity);
+        }
     }
 }

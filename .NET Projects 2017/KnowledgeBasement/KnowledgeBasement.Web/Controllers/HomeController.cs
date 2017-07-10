@@ -32,6 +32,8 @@ namespace KnowledgeBasement.Web.Controllers
 
                 db.Users.Insert(newUser);
 
+                
+
                 var users = db.Users.GetAll();
 
                 ViewData["Message"] = "Your application description page." + users[0].FirstName;
