@@ -6,7 +6,7 @@ namespace KnowledgeBasement.Persistence.Repositories.Base
     {
         List<T> GetAll();
         T Get(object id);
-        T Insert(T entity);
+        bool Insert(T entity);
         int Update(T entity);
         int Delete(object id);
 

@@ -2,108 +2,243 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="~/images/banner1.svg" alt="ASP.NET" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how to build ASP.NET apps that can run anywhere.
-                    <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner2.svg" alt="Visual Studio" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    There are powerful new features in Visual Studio for building modern web apps.
-                    <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner3.svg" alt="Package Management" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Bring in libraries from NuGet, Bower, and npm, and automate tasks using Grunt or Gulp.
-                    <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkID=525029&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner4.svg" alt="Microsoft Azure" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how Microsoft's Azure cloud platform allows you to build, deploy, and scale web apps.
-                    <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-    </div>
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="~/template/paper-kit/assets/paper_img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-<div class="row">
-    <div class="col-md-3">
-        <h2>Application uses</h2>
-        <ul>
-            <li>Sample pages using ASP.NET Core MVC</li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkId=518004">Bower</a> for managing client-side libraries</li>
-            <li>Theming using <a href="http://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
-        </ul>
+    <title>Paper Kit by Creative Tim</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link href="~/template/paper-kit/bootstrap3/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/template/paper-kit/assets/css/ct-paper.css" rel="stylesheet" />
+    <link href="~/template/paper-kit/assets/css/demo.css" rel="stylesheet" />
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
+
+
+    <style>
+        #navbar nav {
+            padding: 0px;
+        }
+
+        .navbar-brand i {
+            margin-top: -10px;
+        }
+
+        .navbar-brand span {
+            margin-left: 30px;
+        }
+
+        .main-header {
+            background-image: url(images/cool-header-img.jpg);
+            background-size: cover;
+            background-color: #FF8F5E;
+            background-position: center center;
+            margin-top: -100px;
+            min-height: 600px;
+        }
+
+            .main-header .motto {
+                color: #FFFFFF;
+                padding-top: 25vh;
+                text-align: center;
+                z-index: 3;
+            }
+
+            .main-header i {
+                font-size: 30px;
+                margin: 20px;
+            }
+
+        .footer-demo {
+            background-attachment: fixed;
+            position: relative;
+            line-height: 20px;
+        }
+
+        .section-padding {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        #start {
+            margin-top: -15px;
+        }
+
+        #offers p {
+            min-height: 100px;
+        }
+    </style>
+
+</head>
+<body>
+
+
+    <!-- navbar come here -->
+    <div id="navbar">
+        <nav class="navbar navbar-ct-transparent" role="navigation">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a class="navbar-brand" href="#">
+                        <i class="fa fa-university fa-2x hidden-xs"></i>
+                        <span>Knowledge Basement</span>
+                    </a>
+
+                </div>
+
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#start">Start</a></li>
+                        <li><a href="#offers">Offers</a></li>
+                        <li>
+                            <a href="#" class="btn btn-danger btn-fill">
+                                <i class="fa fa-sign-in"></i>
+                                Sign In
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn btn-danger btn-fill">
+                                <i class="fa fa-anchor"></i>
+                                Register
+                            </a>
+                        </li>
+                    </ul>
+
+                </div><!-- /.navbar-collapse -->
+
+            </div><!-- /.container-fluid -->
+
+        </nav>
+    </div><!--  end navbar -->
+    <!-- end navbar  -->
+    <div class="main-header">
+        <div class="motto">
+            <h2>Personal Knowledge Bank</h2>
+            <i class="fa fa-graduation-cap"></i>
+            <i class="fa fa-angle-double-right"></i>
+            <i class="fa fa-folder-open "></i>
+            <i class="fa fa-angle-double-right"></i>
+            <i class="fa fa-university"></i>
+            <h5>Collect your knowledge in one place. Keep it easy organized and safe.</h5>
+        </div>
     </div>
-    <div class="col-md-3">
-        <h2>How to</h2>
-        <ul>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkID=398600">Add a Controller and View</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkID=699562">Add an appsetting in config and access it in app.</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkId=699315">Manage User Secrets using Secret Manager.</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkId=699316">Use logging to log a message.</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkId=699317">Add packages using NuGet.</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkId=699318">Add client packages using Bower.</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkId=699319">Target development, staging or production environment.</a></li>
-        </ul>
+    <div class="wrapper">
+
+        <div id="start" class="section text-center landing-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2>Let's talk about product</h2>
+                        <h5>
+                            Have you ever tried to save some important or necessary information somewhere at your PC in text files?
+                        </h5>
+                        <h5>Probably yes. But when files become larger it's getting too diffcult to maintain. Also you cant share it through your
+                        devices. It would be nice to have your personal information online but in a safe place. if you are interested, dont hesitate
+                        and register at Knowledge Basement to start organize your data fast, safe and easy.
+                        </h5>
+                        <br>
+                        <a href="#" class="btn btn-danger btn-fill">See Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="offers" class="section section-light-brown landing-section section-padding">
+            <div class="container">
+                <h3 class="text-center">Register & Store data. It's easy!</h3>
+                <hr />
+                <div class="row">
+                    <div class="col-md-4 column text-center">
+                        <h4>Create projects</h4>
+                        <p>Any piece of information belongs to something. We call it project. Project can be considered as root folder for articles and other indented folders.</p>
+                        <a class="btn btn-danger btn-simple" href="#"><i class="fa fa-briefcase fa-2x"></i></a>
+                    </div>
+                    <div class="col-md-4 column text-center">
+                        <h4>Define categories</h4>
+                        <p>You can create your personal categories. This helps you search and filter data faster. Also it logicaly separates important content.</p>
+                        <a class="btn btn-danger btn-simple" href="#"><i class="fa fa-bookmark fa-2x"></i></a>
+                    </div>
+                    <div class="col-md-4 column text-center">
+                        <h4>Add folders</h4>
+                        <p>Organize your data with pleasure. Create as much folders and levels of indentention as you want!</p>
+                        <a class="btn btn-danger btn-simple" href="#"><i class="fa fa-folder fa-2x"></i></a>
+                    </div>
+                </div>
+                <br />
+            </div>
+        </div>
+
+        <div id="register" class="container tim-container section-padding">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <h2>Do you like what you see?</h2>
+                    <p>Cause if you do, it can be yours for free. Hit the button below to navigate to Creative Tim where you can find the kit. Start a new project or give an old Bootstrap project a new look, we've got you covered. </p>
+                </div>
+                <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 download-area">
+                    <a href="http://www.creative-tim.com/product/paper-kit" class="btn btn-danger btn-fill btn-block btn-lg">Create Knowledge Bank</a>
+                </div>
+            </div>
+            <div class="row sharing-area text-center">
+                <h3>Sharing is caring!</h3>
+                <a href="#" class="btn">
+                    <i class="fa fa-twitter"></i>
+                    Twitter
+                </a>
+                <a href="#" class="btn">
+                    <i class="fa fa-facebook-square"></i>
+                    Facebook
+                </a>
+            </div>
+        </div>
+
+        <br />
+        <footer class="footer-demo section-dark">
+            <div class="container">
+                <nav class="pull-left">
+                    <ul>
+                        <li><a href="#start">Start</a></li>
+                        <li><a href="#offers">Offers</a></li>
+                    </ul>
+                </nav>
+                <div class="copyright pull-right">
+                    © @DateTime.Now.Year, designed with <i class="fa fa-heart heart"></i> by Vladislav Guleaev
+                </div>
+            </div>
+        </footer>
     </div>
-    <div class="col-md-3">
-        <h2>Overview</h2>
-        <ul>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkId=398602">Working with Data</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkId=398603">Security</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkID=699321">Client side development</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkID=699322">Develop on different platforms</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkID=699323">Read more on the documentation site</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Run & Deploy</h2>
-        <ul>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkID=517851">Run your app</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkID=517853">Run tools such as EF migrations and more</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure Web Apps</a></li>
-        </ul>
-    </div>
-</div>
+    <!-- Modal Bodies come here -->
+    <!--   end modal -->
+    <script src="~/template/paper-kit/assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="~/template/paper-kit/assets/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+    <script src="~/template/paper-kit/bootstrap3/js/bootstrap.js" type="text/javascript"></script>
+
+    <!--  Plugins -->
+    <script src="~/template/paper-kit/assets/js/ct-paper-checkbox.js"></script>
+    <script src="~/template/paper-kit/assets/js/ct-paper-radio.js"></script>
+    <script src="~/template/paper-kit/assets/js/bootstrap-select.js"></script>
+    <script src="~/template/paper-kit/assets/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
+    <script src="~/template/paper-kit/assets/js/ct-paper.js"></script>
+</body>
+
+</html>

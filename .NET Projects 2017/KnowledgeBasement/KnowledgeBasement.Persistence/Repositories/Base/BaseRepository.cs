@@ -23,9 +23,9 @@ namespace KnowledgeBasement.Persistence.Repositories.Base
             return _database.Query<T>(Sql.Builder.Append($"select * from {tableName}")).ToList();
         }
 
-        public T Insert(T entity)
+        public bool Insert(T entity)
         {
-            return (T)_database.Insert(tableName, "Id", false, entity);
+            return (bool)_database.Insert(tableName, "Id", false, entity);
         }
 
         public int Update(T entity)

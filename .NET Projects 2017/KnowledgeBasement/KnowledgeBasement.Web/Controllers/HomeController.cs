@@ -1,16 +1,17 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc;
-using PetaPoco.NetCore;
-using System.Linq;
-using KnowledgeBasement.Persistence;
-using KnowledgeBasement.Persistence.Context;
+﻿using Microsoft.AspNetCore.Mvc;
 using KnowledgeBasement.Persistence.Entities;
-using Microsoft.Extensions.Configuration;
+using KnowledgeBasement.Services.Abstract;
 
 namespace KnowledgeBasement.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private IUserService _userService;
+
+        public HomeController(IUserService userService)
+        {
+            _userService = userService;
+        }
         public IActionResult Index()
         {
             return View();
@@ -18,29 +19,20 @@ namespace KnowledgeBasement.Web.Controllers
 
         public IActionResult About()
         {
-            using (var db = new UnitOfWork("Server=(localdb)\\MSSQLLocalDB;Database=knowledgebasementdb;Trusted_Connection=True;MultipleActiveResultSets=true"))
+            var newUser = new AppUser()
             {
+                FirstName = "Vlad",
+                LastName = "Guleaev",
+                Password = "12345",
+                Username = "vguleaev"
+            };
 
-                var newUser = new AppUser()
-                {
-                    FirstName = "Vlad",
-                    Id = Guid.NewGuid(),
-                    LastName = "Guleaev",
-                    Password = "12345",
-                    Username = "vguleaev"
-                };
-
-                db.Users.Insert(newUser);
-
-                
-
-                var users = db.Users.GetAll();
-
-                ViewData["Message"] = "Your application description page." + users[0].FirstName;
+            if (_userService.CheckUsernameIsUnique(newUser.Username))
+            {
+                _userService.RegisterNewUser(newUser);
             }
-            //var db = DatabaseContext.GetDatabase("Server=tcp:vguleaevdatabase.database.windows.net,1433;Initial Catalog=knowledgebasementdb;Persist Security Info=False;User ID=vguleaev;Password=Databasepass1!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
-            //var db = DatabaseContext.GetDatabase("Server=(localdb)\\MSSQLLocalDB;Database=knowledgebasementdb;Trusted_Connection=True;MultipleActiveResultSets=true");
 
+            ViewData["Message"] = "Your application description page.";
 
             return View();
         }
