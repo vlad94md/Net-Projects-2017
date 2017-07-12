@@ -1,8 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -29,24 +28,30 @@
         }
 
         .navbar-brand i {
+            color: #548c8e;
             margin-top: -10px;
         }
 
         .navbar-brand span {
+            color: #548c8e;
             margin-left: 30px;
+        }
+
+        .navbar-item{
+            color: #548c8e !important;
         }
 
         .main-header {
             background-image: url(images/cool-header-img.jpg);
             background-size: cover;
-            background-color: #FF8F5E;
+            background-color: #548c8e;
             background-position: center center;
             margin-top: -100px;
             min-height: 600px;
         }
 
             .main-header .motto {
-                color: #FFFFFF;
+                color: #3e3c3c;
                 padding-top: 25vh;
                 text-align: center;
                 z-index: 3;
@@ -104,11 +109,11 @@
                 </div>
 
 
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="collapse navbar-collapse" id="navbar-right">
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#start">Start</a></li>
-                        <li><a href="#offers">Offers</a></li>
+                        <li><a class="navbar-item" href="#start">Start</a></li>
+                        <li><a class="navbar-item" href="#offers">Offers</a></li>
                         <li>
                             <a href="#" class="btn btn-danger btn-fill">
                                 <i class="fa fa-sign-in"></i>
@@ -151,8 +156,8 @@
                         <h5>
                             Have you ever tried to save some important or necessary information somewhere at your PC in text files?
                         </h5>
-                        <h5>Probably yes. But when files become larger it's getting too diffcult to maintain. Also you cant share it through your
-                        devices. It would be nice to have your personal information online but in a safe place. if you are interested, dont hesitate
+                        <h5>Probably yes. But when files become larger it's getting too diffcult to maintain. Also you can't share it through your
+                        devices. It would be nice to have your personal information online and in a safe place. If you are interested, dont hesitate
                         and register at Knowledge Basement to start organize your data fast, safe and easy.
                         </h5>
                         <br>
@@ -179,7 +184,7 @@
                     </div>
                     <div class="col-md-4 column text-center">
                         <h4>Add folders</h4>
-                        <p>Organize your data with pleasure. Create as much folders and levels of indentention as you want!</p>
+                        <p>Organize your data with pleasure. Create as much folders and levels of indentention as you want! Additionaly you can chose icons for projects and articles.</p>
                         <a class="btn btn-danger btn-simple" href="#"><i class="fa fa-folder fa-2x"></i></a>
                     </div>
                 </div>
@@ -194,7 +199,7 @@
                     <p>Cause if you do, it can be yours for free. Hit the button below to navigate to Creative Tim where you can find the kit. Start a new project or give an old Bootstrap project a new look, we've got you covered. </p>
                 </div>
                 <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 download-area">
-                    <a href="http://www.creative-tim.com/product/paper-kit" class="btn btn-danger btn-fill btn-block btn-lg">Create Knowledge Bank</a>
+                    <a href="http://www.creative-tim.com/product/paper-kit" class="btn btn-danger btn-fill btn-block btn-lg">Create my Knowledge Bank</a>
                 </div>
             </div>
             <div class="row sharing-area text-center">
@@ -236,7 +241,6 @@
     <script src="~/template/paper-kit/assets/js/ct-paper-radio.js"></script>
     <script src="~/template/paper-kit/assets/js/bootstrap-select.js"></script>
     <script src="~/template/paper-kit/assets/js/bootstrap-datepicker.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 
     <script src="~/template/paper-kit/assets/js/ct-paper.js"></script>
 </body>
