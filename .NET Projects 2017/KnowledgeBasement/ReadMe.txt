@@ -8,7 +8,7 @@ specify any custom category and icon for every article and create indention fold
 with file system from OS.
 
 Website:
-https://knowledgebasement.azurewebsites.net
+http://knowledgebasement.azurewebsites.net
 
 Technology Stack:
 
@@ -24,7 +24,7 @@ Documentation:
 1. PetaPoco - https://github.com/CollaboratingPlatypus/PetaPoco
 2. .Net Core - https://www.microsoft.com/net/core
 3. Bootstrap Papper Kit Template - https://www.creative-tim.com/product/paper-kit
-4. Colors made with generated palette - http://colormind.io/
+4. Colors made by generated palette - http://colormind.io/
 5. Command Design Pattern - https://sourcemaking.com/design_patterns/command
 
 Any aditional information you can read from "Design Document.docx"

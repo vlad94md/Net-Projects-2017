@@ -17,6 +17,7 @@ namespace KnowledgeBasement.Web.Controllers
             return View();
         }
 
+
         public IActionResult About()
         {
             var newUser = new AppUser()
