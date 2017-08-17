@@ -1,5 +1,6 @@
 ﻿using System;
 using KnowledgeBasement.Persistence.Repositories;
+using Microsoft.Extensions.Options;
 using PetaPoco.NetCore;
 
 namespace KnowledgeBasement.Persistence.Context
@@ -7,10 +8,14 @@ namespace KnowledgeBasement.Persistence.Context
     public class UnitOfWork : IDisposable
     {
         private readonly Database _database;
-        public UnitOfWork(string connectionString)
+        private readonly ConnectionStrings _settings;
+
+        public UnitOfWork(IOptions<ConnectionStrings> settings)
         {
-            _database = DatabaseContext.GetDatabase(connectionString);
+            _settings = settings.Value;
+            _database = DatabaseContext.GetDatabase(_settings.DefaultConnection);
         }
+
         private UserRepository _users;
         private ProjectRepository _projects;
         private ArticleRepository _articles;

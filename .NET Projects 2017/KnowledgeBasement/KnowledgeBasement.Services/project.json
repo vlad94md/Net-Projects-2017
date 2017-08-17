@@ -3,6 +3,7 @@
 
   "dependencies": {
     "KnowledgeBasement.Persistence": "1.0.0-*",
+    "Microsoft.Extensions.Options": "1.1.1",
     "Microsoft.NETCore.App": {
       "version": "1.0.1",
       "type": "platform"

@@ -22,10 +22,10 @@ namespace KnowledgeBasement.Web.Controllers
         {
             var newUser = new AppUser()
             {
-                FirstName = "Vlad",
-                LastName = "Guleaev",
+                FirstName = "Test",
+                LastName = "Usert",
                 Password = "12345",
-                Username = "vguleaev"
+                Username = "test"
             };
 
             if (_userService.CheckUsernameIsUnique(newUser.Username))

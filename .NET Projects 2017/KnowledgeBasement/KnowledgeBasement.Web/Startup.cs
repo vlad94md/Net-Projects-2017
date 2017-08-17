@@ -1,4 +1,6 @@
-﻿using KnowledgeBasement.Services.Abstract;
+﻿using KnowledgeBasement.Persistence;
+using KnowledgeBasement.Persistence.Context;
+using KnowledgeBasement.Services.Abstract;
 using KnowledgeBasement.Services.Implement;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -25,7 +27,10 @@ namespace KnowledgeBasement.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<IUserService, UserService>();
+            services.AddTransient<UnitOfWork>();
             services.AddMvc();
+            services.AddOptions();
+            services.Configure<ConnectionStrings>(Configuration.GetSection("ConnectionStrings"));
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
