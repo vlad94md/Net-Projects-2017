@@ -1,11 +1,8 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/png" href="~/template/paper-kit/assets/paper_img/favicon.ico">
+    <link rel="icon" type="image/png" href="~/favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
     <title>Knowledge Basement | by Vladislav Guleaev</title>
@@ -56,13 +53,13 @@
                         <li><a class="navbar-item" href="#start">Start</a></li>
                         <li><a class="navbar-item" href="#offers">Offers</a></li>
                         <li>
-                            <a href="#" class="btn btn-danger btn-fill">
+                            <a asp-controller="Account" asp-action="Login" class="btn btn-danger btn-fill">
                                 <i class="fa fa-sign-in"></i>
                                 Sign In
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="btn btn-danger btn-fill">
+                            <a asp-controller="Account" asp-action="Register" class="btn btn-danger btn-fill">
                                 <i class="fa fa-anchor"></i>
                                 Register
                             </a>
@@ -141,7 +138,12 @@
                     <p>Cause if you do, you should register right now for free and start store your data with our service. Hit the button below to start building your personal Knowledge Basement where you can ogranize you data with no stress. Just try it now! </p>
                 </div>
                 <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 download-area">
-                    <a href="http://www.creative-tim.com/product/paper-kit" class="btn btn-danger btn-fill btn-block btn-lg">Create my Knowledge Bank</a>
+                    <a href="http://www.creative-tim.com/product/paper-kit" class="btn btn-danger btn-fill btn-block btn-lg visible-lg">
+                        Create my Knowledge Bank
+                    </a>
+                    <a href="http://www.creative-tim.com/product/paper-kit" class="btn btn-danger btn-fill btn-block btn-lg hidden-lg">
+                        Try it
+                    </a>
                 </div>
             </div>
             <div id="sharing-area" class="row sharing-area text-center">

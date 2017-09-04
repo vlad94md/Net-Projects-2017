@@ -12,6 +12,7 @@ namespace KnowledgeBasement.Web.Controllers
         {
             _userService = userService;
         }
+
         public IActionResult Index()
         {
             return View();
@@ -20,19 +21,6 @@ namespace KnowledgeBasement.Web.Controllers
 
         public IActionResult About()
         {
-            var newUser = new AppUser()
-            {
-                FirstName = "Test",
-                LastName = "Usert",
-                Password = "12345",
-                Username = "test"
-            };
-
-            if (_userService.CheckUsernameIsUnique(newUser.Username))
-            {
-                _userService.RegisterNewUser(newUser);
-            }
-
             ViewData["Message"] = "Your application description page.";
 
             return View();
